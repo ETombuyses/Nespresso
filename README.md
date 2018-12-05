@@ -1,2 +1,2 @@
 # Nespresso
-Redesign of Nespresso
+Redesign of Nespresso for my UX course

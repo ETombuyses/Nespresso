@@ -1,0 +1,14 @@
+.navigation__link {
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 1.25rem;
+    letter-spacing: 10%;
+    }
+
+  &:not(:last-child) {
+    margin-bottom: 10vh;
+  }
+
+
+}

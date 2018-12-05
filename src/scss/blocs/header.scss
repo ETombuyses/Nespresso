@@ -1,0 +1,79 @@
+@import "../config/colors.scss";
+
+
+.header {
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  transition: height 0.3s ease-in;
+  overflow: hidden;
+
+  .header__burgerButton {
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__logo {
+    height: 15vh;
+    justify-content: center;
+    align-items: flex-end;
+    display: none;
+    // transition: display 1s;
+  }
+
+  .header__navigation {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+
+  .header__navigationOthers {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;
+    padding-bottom: 10vh;
+    width: 100vw;
+  }
+
+  &.is-open {
+    height: 100vh;
+
+    .header__logo { 
+      @include visible;
+    }
+
+    .header__navigation {
+      @include visible;
+    }
+
+    .header__navigationOthers {
+      @include visible;
+    }
+  }
+
+  @include small {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  overflow: hidden;
+
+  }
+}
+

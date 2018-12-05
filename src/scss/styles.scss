@@ -1,0 +1,30 @@
+// fichier qui reprend tous les autres fichiers css avec des @import
+
+/*vendors*/ 
+
+@import "vendors/reset.scss";
+
+/*configs*/ 
+
+@import "config/colors.scss";
+@import "config/mixins.scss";
+@import "config/queries.scss";
+@import "config/fonts.scss"; // attention, le fichier importé calcule ses sources depuis sa 
+//localisation à lui, pas de celle du fichier importé : il cherche le fichier des fonts 
+
+
+/*global*/ 
+
+
+@import "global/typography.scss";
+
+@import "global/layout.scss";
+
+
+/*blocs*/
+@import "blocs/header.scss";
+@import "blocs/navigation.scss";
+@import "blocs/navigationOthers.scss";
+@import "blocs/burgerButton.scss";
+
+

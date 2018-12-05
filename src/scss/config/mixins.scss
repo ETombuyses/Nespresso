@@ -1,0 +1,8 @@
+@mixin visible {
+  display: flex;
+}
+
+
+@mixin transition {
+  transition: 0.3s;
+}
