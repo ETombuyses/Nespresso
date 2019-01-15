@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="scss/styles.scss">
   <script defer src="js/main.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js"></script>
   <title>Nespresso</title>
 </head>
 
 <body>
-  <main>
-    <header>
+  <header>
     <nav class="header">
       <div class="header__burgerButton burgerButton">
         <div class="burgerButton__bars"></div>
@@ -33,29 +33,102 @@
         <li class="navigationOthers__link">FR</li>
       </ul>
     </nav>
-</header>
-
-    <section>
-      <div><img alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-gauche-top.png"></div>
-      <h1>Un café d'exception pour les fêtes</h1>
-      <h2>édition limitée</h2>
-      <section>
-        <img title="branches de sapin" alt="branches de sapin">
-        <img title="branches de sapin" alt="branches de sapin">
-        <img title="Nespresso variations original" alt="capsules Nespresso et macarons">
-        <img title="Nespresso Paris black intenso" alt="Tasse de café et capsules Nespresso">
-        <img title="Nespresso variations vertuo" alt="capsules Nespresso, madeleine et macaron">
-      </section>
-      <section>
-        <div></div>
-      </section>
-      <section>
-        <div></div>
-      </section>
-      <section>
-
-      </section>
+  </header>
+  <main>
+    <section class="banner">
+      <img class="banner__decoration banner__decorationTopLeft" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-gauche-top.png">
+      <img class="banner__decoration banner__decorationTopRight" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-droite-top.png">
+      <h2 class="banner__title">Un café d'exception pour les fêtes</h2>
+      <h3 class="banner__subtitle">édition limitée</h3>
+      <img class="banner__image banner__image--original" src="images/mobile/products/nespresso-macaron.png" alt="capsules original macaron et praline">
+      <img class="banner__decoration banner__decoration--blackIntensoOriginal" data-rellax-speed="1" src="images/mobile/products/black-intenso-original.png"
+        alt="cpasule black intenso original">
+      <a href="" class="banner__button">Découvrir</a>
+      <img class="banner__decoration banner__decoration--blackIntensoVertuo" data-rellax-speed="-1" src="images/mobile/products/black-intenso-vertuo.png"
+        alt="capsule black intenso vertuo">
+      <img class="banner__image banner__image--vertuo" src="images/mobile/products/Nespresso-variations-vetuo.png" alt="capsules vertuo madeleine et exotic macaron">
+      <img class="banner__decoration banner__decorationBottomLeft" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-gauche-bot.png">
+      <img class="banner__decoration banner__decorationBottomRight" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-droite-bottom.png">
     </section>
+
+
+    <section class="seasonalProducts">
+      <h2 class="seasonalProducts__title">édition limitée</h2>
+      <img class="decoration--right" src="images/mobile/christmas-decorations/spain-editionlimitee-droite.png" alt="branche de sapin">
+      <div class="slider">
+        <ul class="slider__slides--images">
+          <li class="slider__slide"><img src="images/mobile/products/macaron.png" alt="capsule macaron original"></li>
+          <li class="slider__slide"><img src="images/mobile/products/black intenso.png" alt="capsule black intenso original"></li>
+          <li class="slider__slide"><img src="images/mobile/products/praline.png" alt="capsule praline original"></li>
+        </ul>
+      </div>
+      <div class="slider__arrows">
+          <div id="arrowLeft-sliderLimitedEdition" class="slider__arrow--left"></div>
+          <div id="arrowRight-sliderLimitedEdition" class="slider__arrow--right"></div>
+      </div>
+      <div class="slider__description">
+        <ul class="slider__slides">
+          <li>
+            <h4 class="capsTitle">macaron</h4>
+            <p class="description">Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.</p>
+            <p class="price">0,45€</p>
+            <div class="cartAdd">
+              <p class="cartAdd__quantity">1</p>
+              <div class="cartAdd__addButton"></div>
+            </div>
+          </li>
+          <li>
+            <h4 class="capsTitle">black intenso</h4>
+            <p class="description">Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.</p>
+            <p class="price">0,45€</p>
+            <div class="cartAdd">
+                <p class="cartAdd__quantity">1</p>
+                <div class="cartAdd__addButton"></div>
+              </div>
+          </li>
+          <li>
+            <h4 class="capsTitle">praline</h4>
+            <p class="description">Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.</p>
+            <p class="price">0,45€</p>
+            <div class="cartAdd">
+                <p class="cartAdd__quantity">1</p>
+                <div class="cartAdd__addButton"></div>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <img class="decoration--left" src="images/mobile/christmas-decorations/spain-editionlimitee-gauche.png" alt="">
+      <img class="cofeeBeans" src="images/mobile/christmas-decorations/coffee-beens.png" alt="grains de cafés en pile">
+
+    </section>
+    
+    <section class="nespressoOriginal">
+      <h2 class="title">café original</h2>
+      <p>Original vous offre un large éventail d'arômes. En grande ou petite tasse, intense ou décaféiné, agrémenté de la créma ou avec de la mousse de lait. Classique, à sa manière.</p>
+      <h3>espresso</h3>
+
+    </section>
+
+
+
+
+    <!--essay scage slider-->
+    <div class="delete">
+      <!-- <section class="slider">
+      <div id="slides" class="slider__slides">
+        <img src="http://fans.ocs.fr/wp-content/uploads/WORLDTRADECENTER.jpg"class="slider__slide">
+        <img src="https://amp.businessinsider.com/images/581cd69d46e27a1c008b4cd0-750-375.jpg" alt="" class="slider__slide">
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--ipdlavUz--/c_scale,f_auto,fl_progressive,q_80,w_800/wcg5dy98ojy0vi2bnk64.jpg" alt="" class="slider__slide">
+      </div>
+      <div id="arrow-left"class="slider__arrow slider__arrow--left"></div>
+      <div id="arrow-right" class="slider__arrow slider__arrow--right"></div>
+    </section> -->
+<!-- mettre plutôt des li et ul plutôt que des div et des images // guseppe-->
+    
+    </div>
+
+
+
 
   </main>
 </body>
