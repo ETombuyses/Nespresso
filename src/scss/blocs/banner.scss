@@ -7,6 +7,7 @@
   overflow: hidden;
   width: 100vw;
 
+
   .banner__decoration {
     position: absolute;
   }
@@ -38,27 +39,13 @@
     transform: translateY(100px);
   }
   
-  .banner__title {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 35px;
-    line-height: 150%;
-    font-family: HelveticaNeue;
-    font-weight: lighter;
-    letter-spacing: 4.5px;
-  }
-
   .banner__subtitle {
     color: $gold;
     text-transform: uppercase;
     text-align: center;
     font-size: 20px;
     line-height: 150%;
-    margin-top: 15px;
-    font-family: HelveticaNeue;
+    font-family: Helvetica;
     font-weight: lighter;
     letter-spacing: 1.5px;
   }
@@ -74,25 +61,7 @@
   }
 
   .banner__image--vertuo {
-    margin-top: 53px;
-  }
-
-  .banner__button {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: $gold;
-    text-align: center;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 28px;
-    text-decoration: none;
-    display: block;
-    width: 100px;
-    font-family: Helvetica Neue;
-    font-size: 14px;   
+    margin-top: 48px;
   }
 
   @include small {

@@ -1,0 +1,79 @@
+@import "../config/colors.scss";
+
+.boxProduct {
+  height: 100vh;
+  background-color: black;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  color: white;
+
+  .box-image {
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+
+  .button {
+    text-align: left;
+  }
+
+  .box-title {
+    font-family: Helvetica;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  .cupsNumber::after {
+    content: url("../images/mobile/icons/tasse.svg");
+    width: 15px;
+    padding-left: 5px;
+  }
+
+  .cartAdd--big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    margin-top: 20px;
+
+
+    .addButton {
+      width: 30px;
+      height: 30px;
+      background-color: $gold;
+      border-radius: 50%;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 20px;
+        margin: auto;
+        background-color: white;
+        transform: translateY(5px);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        transform: translateY(-6px);
+      }
+    }
+
+    .text-cart {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+  }
+  
+
+}

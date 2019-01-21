@@ -1,120 +1,424 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/styles.scss" />
+    <link rel="icon" href="images/flavicon/nespresso.ico">
+    <script defer src="js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js"
+    ></script>
+    <title>Nespresso</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="scss/styles.scss">
-  <script defer src="js/main.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js"></script>
-  <title>Nespresso</title>
-</head>
-
-<body>
-  <header>
-    <nav class="header">
-      <div class="header__burgerButton burgerButton">
-        <div class="burgerButton__bars"></div>
-      </div>
-      <a class="header__logo">
-        <img alt="logo Nespresso" src="images/mobile/logos/nespresso-logo.png">
-      </a>
-      <ul class="header__navigation navigation">
-        <li class="navigation__link"><a href="#">Cafés</a></li>
-        <li class="navigation__link"><a href="#">Machines</a></li>
-        <li class="navigation__link"><a href="#">Accessoires</a></li>
-        <li class="navigation__link"><a href="#">Services</a></li>
-        <li class="navigation__link"><a href="#">Nous trouver</a></li>
-      </ul>
-      <ul class="header__navigationOthers navigationOthers">
-        <li class="navigationOthers__link"><img alt="icône question" src="images/mobile/icons/help-icon.svg"></li>
-        <li class="navigationOthers__link"><img alt="icône profil" src="images/mobile/icons/profile-icon.svg"></li>
-        <li class="navigationOthers__link"><img alt="icône pannier" src="images/mobile/icons/cart-icon.svg"></li>
-        <li class="navigationOthers__link">FR</li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="banner">
-      <img class="banner__decoration banner__decorationTopLeft" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-gauche-top.png">
-      <img class="banner__decoration banner__decorationTopRight" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-droite-top.png">
-      <h2 class="banner__title">Un café d'exception pour les fêtes</h2>
-      <h3 class="banner__subtitle">édition limitée</h3>
-      <img class="banner__image banner__image--original" src="images/mobile/products/nespresso-macaron.png" alt="capsules original macaron et praline">
-      <img class="banner__decoration banner__decoration--blackIntensoOriginal" data-rellax-speed="1" src="images/mobile/products/black-intenso-original.png"
-        alt="cpasule black intenso original">
-      <a href="" class="banner__button">Découvrir</a>
-      <img class="banner__decoration banner__decoration--blackIntensoVertuo" data-rellax-speed="-1" src="images/mobile/products/black-intenso-vertuo.png"
-        alt="capsule black intenso vertuo">
-      <img class="banner__image banner__image--vertuo" src="images/mobile/products/Nespresso-variations-vetuo.png" alt="capsules vertuo madeleine et exotic macaron">
-      <img class="banner__decoration banner__decorationBottomLeft" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-gauche-bot.png">
-      <img class="banner__decoration banner__decorationBottomRight" alt="branche de sapin" src="images/mobile/christmas-decorations/sapin-droite-bottom.png">
-    </section>
-
-
-    <section class="seasonalProducts">
-      <h2 class="seasonalProducts__title">édition limitée</h2>
-      <img class="decoration--right" src="images/mobile/christmas-decorations/spain-editionlimitee-droite.png" alt="branche de sapin">
-      <div class="slider">
-        <ul class="slider__slides--images">
-          <li class="slider__slide"><img src="images/mobile/products/macaron.png" alt="capsule macaron original"></li>
-          <li class="slider__slide"><img src="images/mobile/products/black intenso.png" alt="capsule black intenso original"></li>
-          <li class="slider__slide"><img src="images/mobile/products/praline.png" alt="capsule praline original"></li>
+  <body>
+    <header>
+      <nav class="header">
+        <div class="header__burgerButton burgerButton">
+          <div class="burgerButton__bars"></div>
+        </div>
+        <a class="header__logo">
+          <img
+            alt="logo Nespresso"
+            src="images/mobile/logos/nespresso-logo.png"
+          />
+        </a>
+        <ul class="header__navigation navigation">
+          <li class="navigation__link"><a href="#">Cafés</a></li>
+          <li class="navigation__link"><a href="#">Machines</a></li>
+          <li class="navigation__link"><a href="#">Accessoires</a></li>
+          <li class="navigation__link"><a href="#">Services</a></li>
+          <li class="navigation__link"><a href="#">Nous trouver</a></li>
         </ul>
-      </div>
-      <div class="slider__arrows">
-          <div id="arrowLeft-sliderLimitedEdition" class="slider__arrow--left"></div>
-          <div id="arrowRight-sliderLimitedEdition" class="slider__arrow--right"></div>
-      </div>
-      <div class="slider__description">
-        <ul class="slider__slides">
-          <li>
-            <h4 class="capsTitle">macaron</h4>
-            <p class="description">Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.</p>
-            <p class="price">0,45€</p>
-            <div class="cartAdd">
-              <p class="cartAdd__quantity">1</p>
-              <div class="cartAdd__addButton"></div>
-            </div>
+        <ul class="header__navigationOthers navigationOthers">
+          <li class="navigationOthers__link">
+            <img alt="icône question" src="images/mobile/icons/help-icon.svg" />
           </li>
-          <li>
-            <h4 class="capsTitle">black intenso</h4>
-            <p class="description">Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.</p>
-            <p class="price">0,45€</p>
-            <div class="cartAdd">
+          <li class="navigationOthers__link">
+            <img
+              alt="icône profil"
+              src="images/mobile/icons/profile-icon.svg"
+            />
+          </li>
+          <li class="navigationOthers__link">
+            <img alt="icône pannier" src="images/mobile/icons/cart-icon.svg" />
+          </li>
+          <li class="navigationOthers__link">FR</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="banner">
+        <img
+          class="banner__decoration banner__decorationTopLeft"
+          alt="branche de sapin"
+          src="images/mobile/christmas-decorations/sapin-gauche-top.png"
+        />
+        <img
+          class="banner__decoration banner__decorationTopRight"
+          alt="branche de sapin"
+          src="images/mobile/christmas-decorations/sapin-droite-top.png"
+        />
+        <h2 class="title banner__title">Un café d'exception pour les fêtes</h2>
+        <h3 class="banner__subtitle">édition limitée</h3>
+        <img
+          class="banner__image banner__image--original"
+          src="images/mobile/products/nespresso-macaron.png"
+          alt="capsules original macaron et praline"
+        />
+        <img
+          class="banner__decoration banner__decoration--blackIntensoOriginal"
+          data-rellax-speed="1"
+          src="images/mobile/products/black-intenso-original.png"
+          alt="cpasule black intenso original"
+        />
+        <p class="button"><a href="">Découvrir</a></p>
+        <img
+          class="banner__decoration banner__decoration--blackIntensoVertuo"
+          data-rellax-speed="-1"
+          src="images/mobile/products/black-intenso-vertuo.png"
+          alt="capsule black intenso vertuo"
+        />
+        <img
+          class="banner__image banner__image--vertuo"
+          src="images/mobile/products/Nespresso-variations-vetuo.png"
+          alt="capsules vertuo madeleine et exotic macaron"
+        />
+        <img
+          class="banner__decoration banner__decorationBottomLeft"
+          alt="branche de sapin"
+          src="images/mobile/christmas-decorations/sapin-gauche-bot.png"
+        />
+        <img
+          class="banner__decoration banner__decorationBottomRight"
+          alt="branche de sapin"
+          src="images/mobile/christmas-decorations/sapin-droite-bottom.png"
+        />
+      </section>
+
+      <section id="limited-edition" class="seasonalProducts">
+        <h2 class="seasonalProducts__title title">édition limitée</h2>
+        <img
+          class="decoration--right"
+          src="images/mobile/christmas-decorations/spain-editionlimitee-droite.png"
+          alt="branche de sapin"
+        />
+        <div class="slider">
+          <ul id="slider-swap" class="slider__slides--images">
+            <li class="slider__slide">
+              <img
+                src="images/mobile/products/macaron.png"
+                alt="capsule macaron original"
+              />
+            </li>
+            <li class="slider__slide">
+              <img
+                src="images/mobile/products/black intenso.png"
+                alt="capsule black intenso original"
+              />
+            </li>
+            <li class="slider__slide">
+              <img
+                src="images/mobile/products/praline.png"
+                alt="capsule praline original"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="slider__arrows">
+          <div
+            id="left-arrow"
+            class="slider__arrow--left"
+          ></div>
+          <div
+            id="right-arrow"
+            class="slider__arrow--right"
+          ></div>
+        </div>
+        <div class="slider__description">
+          <ul id="slides" class="slider__slides">
+            <li>
+              <h4 class="capsTitle">black intenso</h4>
+              <p class="description">
+                Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.
+              </p>
+              <p class="price">0,45€</p>
+              <div class="cartAdd">
                 <p class="cartAdd__quantity">1</p>
                 <div class="cartAdd__addButton"></div>
               </div>
-          </li>
-          <li>
-            <h4 class="capsTitle">praline</h4>
-            <p class="description">Un mélange d'Arabica renforcé par un Robusta, aux notes de céréales et de noix.</p>
-            <p class="price">0,45€</p>
-            <div class="cartAdd">
+            </li>
+            <li>
+              <h4 class="capsTitle">praline</h4>
+              <p class="description">
+                Un café aromatisé aux noisettes grillées qui évoque la douceur d’un dessert au praliné.
+              </p>
+              <p class="price">0,45€</p>
+              <div class="cartAdd">
                 <p class="cartAdd__quantity">1</p>
                 <div class="cartAdd__addButton"></div>
               </div>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <h4 class="capsTitle">macaron</h4>
+              <p class="description">
+                Un café aromatisé à l’amande, caractéristique des macarons. Doux et délicat.
+              </p>
+              <p class="price">0,45€</p>
+              <div class="cartAdd">
+                <p class="cartAdd__quantity">1</p>
+                <div class="cartAdd__addButton"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <img
+          class="decoration--left"
+          src="images/mobile/christmas-decorations/spain-editionlimitee-gauche.png"
+          alt=""
+        />
+        <img
+          class="cofeeBeans"
+          src="images/mobile/christmas-decorations/coffee-beens.png"
+          alt="grains de cafés en pile"
+        />
+      </section>
+
+      <div class="originalrange">
+        <section id="original" class="nespressoOriginal">
+          <h2 class="title">café original</h2>
+          <p class="textDescription">
+            Original vous offre un large éventail d'arômes. En grande ou petite
+            tasse, intense ou décaféiné, agrémenté de la créma ou avec de la
+            mousse de lait. Classique, à sa manière.
+          </p>
+          <h3 class="product-category">espresso</h3>
+          <div class="slider">
+            <ul  id="slides" class="slider__slides">
+              <li class="slide">
+                <img
+                  src="images/mobile/products/cappriccio.png"
+                  alt="capsule nespresso capriccio"
+                />
+                <p class="productName">cappriccio</p>
+                <p class="price">0,35€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+              <li class="slide">
+                <img
+                  src="images/mobile/products/cosi.png"
+                  alt="capsule nespresso cosi"
+                />
+                <p class="productName">cosi</p>
+                <p class="price">0,35€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+              <li class="slide">
+                <img
+                  src="images/mobile/products/livanto.png"
+                  alt="capsule nespresso livanto"
+                />
+                <p class="productName">livanto</p>
+                <p class="price">0,35€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+              <li class="slide">
+                <img
+                  src="images/mobile/products/volluto.png"
+                  alt="capsule nespresso volluto"
+                />
+                <p class="productName">volluto</p>
+                <p class="price">0,35€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="slider__arrows">
+            <div
+              id="left-arrow"
+              class="slider__arrow--left"
+            ></div>
+            <div
+              id="right-arrow"
+              class="slider__arrow--right"
+            ></div>
+          </div>
+          <p class="button"><a href="">Découvrir la gamme</a></p>
+        </section>
+
+        <section class="boxProduct original">
+          <img
+            class="box-image"
+            src="images/mobile/products/coffret-original.png"
+            alt="coffret nespresso original"
+          />
+          <p class="price">77,90€</p>
+          <p class="cupsNumber">200</p>
+          <h3 class="box-title">Les essentiels</h3>
+          <p>
+            Plongez dans l'expérience des cafés Nespresso Original à travers cette
+            sélection de 20 grands crus séléctionnés avec soin. Contient 200
+            capsules Original.
+          </p>
+          <div class="cartAdd--big">
+            <div class="addButton"></div>
+            <p class="text-cart">ajouter au panier</p>
+          </div>
+          <p class="button"><a href="">Voir l'assortiment</a></p>
+        </section>
       </div>
-      <img class="decoration--left" src="images/mobile/christmas-decorations/spain-editionlimitee-gauche.png" alt="">
-      <img class="cofeeBeans" src="images/mobile/christmas-decorations/coffee-beens.png" alt="grains de cafés en pile">
-
-    </section>
-    
-    <section class="nespressoOriginal">
-      <h2 class="title">café original</h2>
-      <p>Original vous offre un large éventail d'arômes. En grande ou petite tasse, intense ou décaféiné, agrémenté de la créma ou avec de la mousse de lait. Classique, à sa manière.</p>
-      <h3>espresso</h3>
-
-    </section>
 
 
+      <div class="vertuorange">
+        <section id="vertuo" class="nespressoVertuo">
+          <h2 class="title">café vertuo</h2>
+          <p class="textDescription">
+            Les possibilités de l'univers Vertuo sont infinies et adaptées à tout
+            types de cafés. Toutes vos envies, votre café.
+          </p>
+          <h3 class="product-category">espresso</h3>
+          <div class="slider">
+            <ul id="slides" class="slider__slides">
+              <li class="slide">
+                <img
+                  src="images/mobile/products/altissio.png"
+                  alt="capsule nespresso altissio"
+                />
+                <p class="productName">altissio</p>
+                <p class="price">0,40€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+              <li class="slide">
+                <img
+                  src="images/mobile/products/decaffeinato.png"
+                  alt="capsule nespresso decaffeinato"
+                />
+                <p class="productName">decaffeinato</p>
+                <p class="price">0,40€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+              <li class="slide">
+                <img
+                  src="images/mobile/products/diavolitto.png"
+                  alt="capsule nespresso diavolitto"
+                />
+                <p class="productName">diavolitto</p>
+                <p class="price">0,40€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+              <li class="slide">
+                <img
+                  src="images/mobile/products/voltesso.png"
+                  alt="capsule nespresso voltesso"
+                />
+                <p class="productName">voltesso</p>
+                <p class="price">0,40€</p>
+                <div class="cartAdd">
+                  <p class="cartAdd__quantity">1</p>
+                  <div class="cartAdd__addButton"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="slider__arrows">
+            <div
+              id="left-arrow"
+              class="slider__arrow--left"
+            ></div>
+            <div
+              id="right-arrow"
+              class="slider__arrow--right"
+            ></div>
+          </div>
+          <p class="button"><a href="">Découvrir la gamme</a></p>
+        </section>
+
+        <section class="boxProduct vertuo">
+          <img
+            class="box-image"
+            src="images/mobile/products/coffret vertuo.png"
+            alt=""
+          />
+          <p class="price">81,00€</p>
+          <p class="cupsNumber">150</p>
+          <h3 class="box-title">Assortiment découverte</h3>
+          <p>
+            Découvrez notre sélection de grand crus pour satisfaire toutes vos envies café de l'Espresso au Mug. Contient 150 capsules.
+          </p>
+          <div class="cartAdd--big">
+            <div class="addButton"></div>
+            <p class="text-cart">ajouter au panier</p>
+          </div>
+          <p class="button"><a href="">Voir l'assortiment</a></p>
+        </section>
+      </div>
+      
+      <section class="machines">
+        <h2 class="title">machines</h2>
+        <h3 class="product-category">original</h3>
+        <div class="sliderMachines">
+          <ul id="slidesLimitedEdition" class="slides">
+            <li class="slide"><img src="images/mobile/products/citiz-and-milk.png" alt=""></li>
+            <li class="slide"><img src="images/mobile/products/citiz-and-milk.png"  alt=""></li>
+            <li class="slide"><img src="images/mobile/products/citiz-and-milk.png"  alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="slider__arrows">
+            <div
+              id="arrowLeft-sliderLimitedEdition"
+              class="slider__arrow--left"
+            ></div>
+            <div
+              id="arrowRight-sliderLimitedEdition"
+              class="slider__arrow--right"
+            ></div>
+          </div>
+        <div class="slider-description">
+          <ul>
+            <li>
+              <p class="machineName">citiz&milk</p>
+              <p class="machine-description">CitiZ&Milk est la machine dont vous avez besoin pour préparer vos recettes café à base de lait.</p>
+              <p class="price">249€</p>
+              <p class="button"><a href="">Voir le produit</a></p>
+            </li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
 
 
-    <!--essay scage slider-->
-    <div class="delete">
-      <!-- <section class="slider">
+      </section>
+
+
+
+
+      <!--essay scage slider-->
+      <div class="delete">
+        <!-- <section class="slider">
       <div id="slides" class="slider__slides">
         <img src="http://fans.ocs.fr/wp-content/uploads/WORLDTRADECENTER.jpg"class="slider__slide">
         <img src="https://amp.businessinsider.com/images/581cd69d46e27a1c008b4cd0-750-375.jpg" alt="" class="slider__slide">
@@ -123,14 +427,8 @@
       <div id="arrow-left"class="slider__arrow slider__arrow--left"></div>
       <div id="arrow-right" class="slider__arrow slider__arrow--right"></div>
     </section> -->
-<!-- mettre plutôt des li et ul plutôt que des div et des images // guseppe-->
-    
-    </div>
-
-
-
-
-  </main>
-</body>
-
+        <!-- mettre plutôt des li et ul plutôt que des div et des images // guseppe-->
+      </div>
+    </main>
+  </body>
 </html>

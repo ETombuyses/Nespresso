@@ -18,6 +18,7 @@
 
 @import "global/typography.scss";
 @import "global/layout.scss";
+@import "global/interface.scss";
 
 
 /*blocs*/
@@ -29,5 +30,10 @@
 @import "blocs/seasonalProducts.scss";
 @import "blocs/quick-cart-add.scss";
 @import "blocs/nespressoOriginal.scss";
+@import "blocs/Box.scss";
+@import "blocs/nespressoVertuo.scss";
+@import "blocs/machines.scss";
+@import "blocs/originalrange.scss";
+@import "blocs/vertuorange.scss";
 
 

@@ -18,52 +18,106 @@ var rellax = new Rellax('.banner__decoration--blackIntensoVertuo', {
 
 
 
-// slider cpasules edition limitée
+/* SLIDER LIMITED EDITION */
+var limitedEdition = document.getElementById('limited-edition');
 
-var arrowLeftLimitedEdition = document.getElementById('arrowLeft-sliderLimitedEdition');
-var arrowRightLimitedEdition = document.getElementById('arrowRight-sliderLimitedEdition');
-var imagesSliderLimitedEdition = document.querySelectorAll('.slider__slides--images li');
-var sliderLimitedEdition = document.querySelector('.slider__slides--images');
-var index = 0;
+var swapImages = function (coffeeType) {
+  var slides = coffeeType.querySelector('#slider-swap');
+  var slidesLength = slides.querySelectorAll('li').length;
+  var leftArrow = coffeeType.querySelector('#left-arrow');
+  var rightArrow = coffeeType.querySelector('#right-arrow');
 
-//tableau js où on change la position des li dans le tableau
+  rightArrow.addEventListener('click', function () {
+    slides.appendChild(slides.querySelector('li'));
+  });
 
-// prepend = couper / coller l'élément du tableau sélecetionné au début de l'élément.
+  leftArrow.addEventListener('click', function (){
+      slides.prepend(slides.querySelectorAll('li')[slidesLength - 1]);
+  });
 
-arrowLeftLimitedEdition.addEventListener('click', function () {
-  if (index === 0) {
-    sliderLimitedEdition.prepend(imagesSliderLimitedEdition[2]);
-    index ++;
-  }
-  else if (index === 1) {
-    sliderLimitedEdition.prepend(imagesSliderLimitedEdition[1]);
-    index ++;
-  }
 
-  else if (index === 2) {
-    sliderLimitedEdition.prepend(imagesSliderLimitedEdition[0]);
-    index = 0;
-  }
-});
+};
 
-arrowRightLimitedEdition.addEventListener('click', function () {
-  if (index === 0) {
-    sliderLimitedEdition.append(imagesSliderLimitedEdition[0]);
-    index = 2;
-  }
+swapImages(limitedEdition);
 
-  else if (index === 2) {
-    sliderLimitedEdition.append(imagesSliderLimitedEdition[1]);
-    index = 1;
-  }
 
-  else if (index === 1) {
-    sliderLimitedEdition.append(imagesSliderLimitedEdition[2]);
-    index = 0;
-  }
-});
+/* SLIDER DESCRIPTION */
 
-  
+var original = document.getElementById('original');
+var vertuo = document.getElementById('vertuo');
+var limitedEdition = document.getElementById('limited-edition');
+
+// les paramètres d'une fonction n'existent que dans la fonction. --> utiliser return pour sauvegarder les valeurs de la fonction si on doit les utiliser en dehors.
+// ATTENTION: on a droit qu'à une seule valeur dans return --> si on a besoin de plusieurs valeurs, faire un tableau dans return
+// ex: return = {index: index, slider: slider}
+
+// écrire var ou juste function directement c'est pareil
+
+var moveImages = function (coffeeType) {
+  var slides = coffeeType.querySelector('#slides');
+  var leftArrow = coffeeType.querySelector('#left-arrow');
+  var rightArrow = coffeeType.querySelector('#right-arrow');
+  var sliderWidth = slides.offsetWidth;
+  var index = 0;
+  slides.appendChild(slides.querySelector('li').cloneNode(slides.querySelector('img')));
+  var slidesLength = slides.querySelectorAll('li').length;
+
+  rightArrow.addEventListener('click', function() {
+    if (index < slidesLength - 1) {
+      index++;
+      slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+    }
+
+    if (index === slidesLength - 1) {
+      index = 0;
+      slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+    }
+  });
+
+  leftArrow.addEventListener('click', function() {
+
+    if (index > 0) {
+      index--;
+      slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+    }
+
+    else {
+      if (index === 0) {
+        index = slidesLength - 2;
+        slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+      }
+    }
+  });
+} ;
+
+moveImages(original);
+moveImages(vertuo);
+moveImages(limitedEdition);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //CAGE SLIDER TEST
 
@@ -130,6 +184,10 @@ arrowRightLimitedEdition.addEventListener('click', function () {
 // arrowLeft.addEventListener('click', function() {
 //   prev ();
 // });
+
+
+
+
 
 // // rendre le slider navigable avec les flèches pour accessibilité
 // window.addEventListener('keydown', function() {

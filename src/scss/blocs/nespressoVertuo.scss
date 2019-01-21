@@ -1,6 +1,6 @@
 @import '../config/colors.scss';
 
-.nespressoOriginal {
+.nespressoVertuo {
   height: 100vh;
   position: relative;
 
@@ -12,7 +12,6 @@
     margin-top: 30px;
     margin-bottom: 20px;
   }
-
   
   .slider__arrows {
     display: flex;
@@ -20,7 +19,7 @@
     height: 30px;
     margin-top: 30px;
     left: 50%;
-    transform: translate(-50%) translateY(-240px);
+    transform: translate(-50%) translateY(-220px);
     align-items: center;
     justify-content: space-between;
     position: absolute;
@@ -80,6 +79,7 @@
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    padding-top: 20px;
     
 
    .slider__slides {

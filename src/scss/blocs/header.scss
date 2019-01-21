@@ -1,46 +1,49 @@
-@import "../config/colors.scss";
-
 .header {
   background-color: $black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 50px;
   position: fixed;
-  z-index: 3;
+  z-index: 10;
   bottom: 0;
   transition: height 0.3s ease-in;
-  overflow: hidden;
 
   .header__burgerButton {
     height: 50px;
     width: 100vw;
     position: fixed;
     bottom: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     @include small {
       display: none;
     }
   }
 
+  
+  &.is-open {
+      .burgerButton__bars {
+        background-color: transparent;
+  
+        &::before {
+          transform: translateX(-7px) translateY(-2px) rotate(45deg);
+        }
+  
+        &::after {
+          transform: translateX(12px) translateY(-5px) rotate(-45deg);
+        }
+      }
+    }
+
   .header__logo {
     height: 15vh;
     padding-top: 50px;
     display: none;
-    // transition: display 1s;
 
     @include small {
-      display: inline-block;
+      display: block;
+      margin: auto;
       position: absolute;
-      top: 5px;
-      left: 50%; // image starts in the middle of the page
-      transform: translateX(-50%); // half the image go left --> centered
-      text-align: center;
+      // left: 50%; // image starts in the middle of the page
+      // transform: translateX(-50%); // half the image go left --> centered
       padding-top: 0;
     }
   }
@@ -55,9 +58,11 @@
     @include small{
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
       width: 600px;
       justify-content: space-between;
       margin-top: 42px;
+      height: 30px;
     }
   }
 
@@ -84,7 +89,10 @@
     height: 100vh;
 
     .header__logo { 
-      display: inline-block;
+      display: block;
+      width: 157px;
+      margin-left: 50%;
+      transform: translateX(-50%);
     }
 
     .header__navigation {
@@ -104,7 +112,7 @@
   display: flex;
   flex-direction: row;
   height: 100px;
-  position: fixed relative;
+  position: fixed;
   top: 0px;
   border-bottom: white 2px solid;
   justify-content: center;

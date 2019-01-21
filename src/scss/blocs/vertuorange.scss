@@ -1,0 +1,14 @@
+.vertuorange {
+  
+  @include small {
+    display: flex;
+
+    .boxProduct.vertuo {
+      width: 30vw;
+    }
+
+    .nespressoVertuo {
+      flex-grow: 2;
+    }
+  }
+}

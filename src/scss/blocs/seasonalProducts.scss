@@ -5,21 +5,10 @@
   background-image: url('../images/mobile/christmas-decorations/stars-background.png');
   opacity: 1;
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   background-attachment: fixed;
   position: relative;
   
-
-  .seasonalProducts__title {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 35px;
-    line-height: 150%;
-    font-family: Helvetica;
-    font-weight: normal;
-    letter-spacing: 4.5px;
-  }
 
   .decoration--right{
     position: absolute;
@@ -34,12 +23,16 @@
   }
 
   .slider {
-    margin-top: 88px;
+    margin-top: 50px;
     width: 236px;
     height: 125px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+
+    @include small {
+      width: 500px;
+    }
 
     .slider__slides--images {
       display: flex;
@@ -47,10 +40,27 @@
       height: 125px;
       justify-content: space-between;
 
+      @include small {
+        width: 500px;
+      }
+
+      li {
+        width: 79px;
+
+        @include small {
+          width: 137px;
+        }
+      }
+      
       li:nth-child(1) img, li:nth-child(3) img  {
         opacity: 0.5;
         height: 50%;
         margin-top: 63px;
+
+        @include small {
+          height: 80%;
+          margin-top: 29px;
+        }
       } 
     }
 
@@ -102,7 +112,6 @@
       
       width: 30px;
       height:30px;
-      z-index: 5;
 
 
       &::before {
@@ -120,9 +129,16 @@
         width: 20px;
         height: 3px;
         background-color: $gold;
-        transform:  translateY(17px) translateX(5px) rotate(-45deg) ;
+        transform:  translateY(17px) translateX(5px) rotate(-45deg);
       }
+      // &:hover::after {
+      //     transform: scale(1.5) translateY(0px) translateX(5px) rotate(45deg) ;
+      //   }
 
+      // &:hover::before {
+      //   transform: scale(1.5) translateY(14px) translateX(5px) rotate(-45deg) ;
+      // }
+      
     }
   }
 
@@ -150,14 +166,10 @@
         width: 250px;
         margin-top: 20px;
         margin-bottom: 25px;
-        line-height: 150%;
       }
 
       .price {
-        color: $gold;
-        font-style: italic;
         text-align: center;
-        margin-bottom: 10px;
       }
 
     }
@@ -167,6 +179,14 @@
     position: absolute;
     bottom: 28px;
     right: 10px;
+
+
+    @include small {
+      bottom: 80px;
+      right: 20px;
+    }
   }
+
+
 }
 

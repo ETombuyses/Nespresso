@@ -1,0 +1,11 @@
+.originalrange {
+  
+  @include small {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .boxProduct.original {
+      width: 40%;
+    }
+  }
+}
