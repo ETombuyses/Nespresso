@@ -8,6 +8,11 @@
   object-fit: cover;
   background-attachment: fixed;
   position: relative;
+
+  @media (min-width: 700px) {
+    background-image: url('../images/desktop/christmas-decorations/stars-background-large.png');
+    max-height: 100vh;
+  }
   
 
   .decoration--right{

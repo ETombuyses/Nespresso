@@ -14,11 +14,18 @@
 
   .banner__decoration--blackIntensoOriginal {
     left: 26px;
+
+    @include small {
+      display: none;
+    }
   }
 
   .banner__decoration--blackIntensoVertuo {
     right: 38px;
-    top: 309px;
+
+    @include small {
+      display: none;
+    }
   }
 
   .banner__decorationTopLeft {
@@ -48,6 +55,19 @@
     font-family: Helvetica;
     font-weight: lighter;
     letter-spacing: 1.5px;
+    margin-bottom: 1.25rem;
+  }
+
+  .banner__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include small {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .banner__image {
@@ -57,16 +77,43 @@
   }
 
   .banner__image--original {
-    margin-top: 1.25rem;
+    
+
+    
+  }
+
+  .banner__middleImage {
+    display: none;
+
+    @include small {
+      display: block;
+      max-width: 40vw;
+      
+    }
   }
 
   .banner__image--vertuo {
-    margin-top: 48px;
   }
 
   @include small {
     padding-top: 6.25rem;
     overflow: hidden;
+  }
+
+  .button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding: 40px;
+
+    @include small {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5%;
+
+    }
   }
 }
 

@@ -54,7 +54,7 @@
         <img
           class="banner__decoration banner__decorationTopLeft"
           alt="branche de sapin"
-          src="images/mobile/christmas-decorations/sapin-gauche-top.png"
+          src="images/mobile/christmas-decorations/sapin-gauche-top.png"   
         />
         <img
           class="banner__decoration banner__decorationTopRight"
@@ -63,29 +63,36 @@
         />
         <h2 class="title banner__title">Un café d'exception pour les fêtes</h2>
         <h3 class="banner__subtitle">édition limitée</h3>
-        <img
-          class="banner__image banner__image--original"
-          src="images/mobile/products/nespresso-macaron.png"
-          alt="capsules original macaron et praline"
-        />
-        <img
-          class="banner__decoration banner__decoration--blackIntensoOriginal"
-          data-rellax-speed="1"
-          src="images/mobile/products/black-intenso-original.png"
-          alt="cpasule black intenso original"
-        />
-        <p class="button"><a href="">Découvrir</a></p>
-        <img
-          class="banner__decoration banner__decoration--blackIntensoVertuo"
-          data-rellax-speed="-1"
-          src="images/mobile/products/black-intenso-vertuo.png"
-          alt="capsule black intenso vertuo"
-        />
-        <img
-          class="banner__image banner__image--vertuo"
-          src="images/mobile/products/Nespresso-variations-vetuo.png"
-          alt="capsules vertuo madeleine et exotic macaron"
-        />
+        <div class="banner__images">
+        <picture>
+          <source media="(max-width: 799px)" srcset="images/mobile/products/original-macaron-praline.png">
+          <source media="(min-width: 800px)" srcset="images/desktop/products/original-limited-edition-large.png">
+          <img class="banner__image banner__image--original" src="images/desktop/products/original-limited-edition-large.png" alt="capsules original macaron et praline">
+        </picture>
+
+        <img class="banner__middleImage" src="images/desktop/products/black-intenso-large.png" alt="tasse de café avec deux capsules blakc intenso oriinal">
+        
+        <p class="button">
+            <img
+            class="banner__decoration banner__decoration--blackIntensoOriginal"
+            data-rellax-speed="1"
+            src="images/mobile/products/black-intenso-original.png"
+            alt="capsule black intenso original"
+          />
+          <a class="buttonLink" href="">Découvrir</a>
+          <img
+            class="banner__decoration banner__decoration--blackIntensoVertuo"
+            data-rellax-speed="-1"
+            src="images/mobile/products/black-intenso-vertuo.png"
+            alt="capsule black intenso vertuo"
+          />
+        </p>
+        <picture>
+          <source media="(max-width: 799px)" srcset="images/mobile/products/Nespresso-variations-vetuo.png">
+          <source media="(min-width: 800px)" srcset="images/desktop/products/vertuo-limited-edition-large.png">
+            <img class="banner__image banner__image--vertuo" src="images/desktop/products/vertuo-limited-edition-large.png" alt="capsules vertuo madeleine et exotic macaron"> 
+        </picture>
+      </div>
         <img
           class="banner__decoration banner__decorationBottomLeft"
           alt="branche de sapin"
@@ -257,7 +264,7 @@
               class="slider__arrow--right"
             ></div>
           </div>
-          <p class="button"><a href="">Découvrir la gamme</a></p>
+          <p class="button"><a class="buttonLink" href="">Découvrir la gamme</a></p>
         </section>
 
         <section class="boxProduct original">
@@ -278,7 +285,7 @@
             <div class="addButton"></div>
             <p class="text-cart">ajouter au panier</p>
           </div>
-          <p class="button"><a href="">Voir l'assortiment</a></p>
+          <p class="button"><a class="buttonLink" href="">Voir l'assortiment</a></p>
         </section>
       </div>
 
@@ -353,7 +360,7 @@
               class="slider__arrow--right"
             ></div>
           </div>
-          <p class="button"><a href="">Découvrir la gamme</a></p>
+          <p class="button"><a class="buttonLink"href="">Découvrir la gamme</a></p>
         </section>
 
         <section class="boxProduct vertuo">
@@ -372,7 +379,7 @@
             <div class="addButton"></div>
             <p class="text-cart">ajouter au panier</p>
           </div>
-          <p class="button"><a href="">Voir l'assortiment</a></p>
+          <p class="button"><a class="buttonLink" href="">Voir l'assortiment</a></p>
         </section>
       </div>
       
@@ -403,7 +410,7 @@
               <p class="machineName">citiz&milk</p>
               <p class="machine-description">CitiZ&Milk est la machine dont vous avez besoin pour préparer vos recettes café à base de lait.</p>
               <p class="price">249€</p>
-              <p class="button"><a href="">Voir le produit</a></p>
+              <p class="button"><a class="buttonLink" href="">Voir le produit</a></p>
             </li>
             <li></li>
             <li></li>
