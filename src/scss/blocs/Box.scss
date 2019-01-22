@@ -1,5 +1,3 @@
-@import "../config/colors.scss";
-
 .boxProduct {
   height: 100vh;
   background-color: black;
@@ -14,9 +12,7 @@
   }
 
 
-  .button {
-    text-align: left;
-  }
+  
 
   .box-title {
     font-family: Helvetica;
@@ -74,6 +70,10 @@
     }
 
   }
-  
+
+  .box__button {
+   display: flex;
+   margin-top: 5vh;
+  }
 
 }

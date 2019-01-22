@@ -1,19 +1,29 @@
-@import "../config/colors.scss";
+
 .banner {
   height: 100vh;
-  background-color: black;
+  background-color: $black;
   color: white;
-  position: relative;
   overflow: hidden;
   width: 100vw;
+  max-height: 800px;
 
+  .banner__title {
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
 
+    @include small {
+      padding-top: 4%;
+      padding-bottom: 1%;
+    }
+  }
   .banner__decoration {
     position: absolute;
   }
 
   .banner__decoration--blackIntensoOriginal {
-    left: 26px;
 
     @include small {
       display: none;
@@ -21,52 +31,75 @@
   }
 
   .banner__decoration--blackIntensoVertuo {
-    right: 38px;
+  
+    @include small {
+      display: none;
+    }
+  }
+
+  .banner__decoration--TopLeft {
+    left: 0;
+    transform: translateX(-60%) translateY(-30%);
+    animation: christmastreeLeftTop 8s infinite;
+    animation-delay: 2s;
+  }
+
+  .banner__decoration--TopRight {
+    right: 0;
+    transform: translateX(30%) translateY(-45%);
+    animation: christmastreeRightTop 8s infinite;
+    animation-delay: 2.5s;
+  }
+
+  .banner__decoration--bottomRight {
+    right: 0;
+    bottom: 50px;
+    transform: translateX(50%);
+    animation: christmastreeRightBottom 8s infinite;
+    animation-delay: 2.5s;
+  
 
     @include small {
       display: none;
     }
   }
 
-  .banner__decorationTopLeft {
+  .banner__decoration--bottomLeft {
     left: 0;
-  }
+    bottom: 50px;
+    transform: translateX(-55%);
+    animation: christmastreeLeftBottom 7.9s infinite;
+    animation-delay: 2s;
 
-  .banner__decorationTopRight {
-    right: 0;
-  }
-  .banner__decorationBottomRight {
-    right: 0;
-    bottom:0;
-  }
-
-  .banner__decorationBottomLeft {
-    left: 0;
-    bottom: 0;
-    transform: translateY(100px);
+    @include small {
+      display: none;
+    }
   }
   
   .banner__subtitle {
     color: $gold;
     text-transform: uppercase;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 150%;
     font-family: Helvetica;
     font-weight: lighter;
     letter-spacing: 1.5px;
-    margin-bottom: 1.25rem;
   }
 
   .banner__images {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 70%;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
 
     @include small {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      height: 70%;
     }
   }
 
@@ -74,11 +107,18 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
 
-  .banner__image--original {
-    
+    @include small {
+      width: 100%;
 
+      &.banner__image--original {
+        transform: translateX(-30%);
+      }
+  
+      &.banner__image--vertuo {
+        transform: translateX(15%);
+      }
+    }
     
   }
 
@@ -87,13 +127,12 @@
 
     @include small {
       display: block;
-      max-width: 40vw;
+      max-height: 200px;
+      padding-right: 9vw;
       
     }
   }
 
-  .banner__image--vertuo {
-  }
 
   @include small {
     padding-top: 6.25rem;
@@ -103,18 +142,32 @@
   .button {
     position: relative;
     display: flex;
-    justify-content: center;
-    width: 400px;
-    padding: 40px;
+    justify-content: space-between;
+    width: 280px;
+    padding: 30px 0px;
+    align-items: center;
+    z-index: 3;
+
+    a:active {
+      border: 1px $gold solid ;
+      background: $black;
+      color: $gold;
+    }
 
     @include small {
       position: absolute;
       left: 50%;
+      width: 92px;
+      padding: 0;
       transform: translateX(-50%);
-      bottom: 5%;
-
+      top: 85%;
     }
   }
+}
+
+
+#homebutton {
+  animation: 4s shake 3s infinite;
 }
 
 // CAGE SLIDER

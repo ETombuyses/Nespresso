@@ -1,11 +1,31 @@
 .buttonLink {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding: 10px 15px;
   background-color: $gold;
   color: white;
   text-decoration: none;
   font-family: Helvetica;
   font-size: 14px;
+  
+  &.buttonLink--noBackground {
+  background-color: transparent;
+  color: $gold;
+  border: 1px $gold solid;
+
+    &:hover {
+      background-color: $gold;
+      color: white;
+    }
+
+    &:active {
+      background-color: $gold;
+      color: white;
+    }
 }
+
+  &:hover {
+    background-color: transparent;
+    color: $gold;
+    border: 1px $gold solid;
+  }
+}
+

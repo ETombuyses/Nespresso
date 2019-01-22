@@ -9,7 +9,8 @@
 @import "config/colors.scss";
 @import "config/mixins.scss";
 @import "config/queries.scss";
-@import "config/fonts.scss"; // attention, le fichier importé calcule ses sources depuis sa 
+@import "config/fonts.scss"; 
+@import "config/keyframes.scss"; // attention, le fichier importé calcule ses sources depuis sa 
 //localisation à lui, pas de celle du fichier importé : il cherche le fichier des fonts 
 
 

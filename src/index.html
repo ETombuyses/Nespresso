@@ -52,16 +52,16 @@
     <main>
       <section class="banner">
         <img
-          class="banner__decoration banner__decorationTopLeft"
+          class="banner__decoration banner__decoration--TopLeft"
           alt="branche de sapin"
           src="images/mobile/christmas-decorations/sapin-gauche-top.png"   
         />
         <img
-          class="banner__decoration banner__decorationTopRight"
+          class="banner__decoration banner__decoration--TopRight"
           alt="branche de sapin"
           src="images/mobile/christmas-decorations/sapin-droite-top.png"
         />
-        <h2 class="title banner__title">Un café d'exception pour les fêtes</h2>
+        <h2 class="banner__title mainTitle">Un café d'exception pour les fêtes</h2>
         <h3 class="banner__subtitle">édition limitée</h3>
         <div class="banner__images">
         <picture>
@@ -72,21 +72,21 @@
 
         <img class="banner__middleImage" src="images/desktop/products/black-intenso-large.png" alt="tasse de café avec deux capsules blakc intenso oriinal">
         
-        <p class="button">
+        <div class="button">
             <img
-            class="banner__decoration banner__decoration--blackIntensoOriginal"
+            class="banner__decoration--blackIntensoOriginal"
             data-rellax-speed="1"
             src="images/mobile/products/black-intenso-original.png"
             alt="capsule black intenso original"
           />
-          <a class="buttonLink" href="">Découvrir</a>
+          <a id="homebutton" class="buttonLink buttonLink--noBackground" href="">Découvrir</a>
           <img
-            class="banner__decoration banner__decoration--blackIntensoVertuo"
+            class="banner__decoration--blackIntensoVertuo"
             data-rellax-speed="-1"
             src="images/mobile/products/black-intenso-vertuo.png"
             alt="capsule black intenso vertuo"
           />
-        </p>
+        </div>
         <picture>
           <source media="(max-width: 799px)" srcset="images/mobile/products/Nespresso-variations-vetuo.png">
           <source media="(min-width: 800px)" srcset="images/desktop/products/vertuo-limited-edition-large.png">
@@ -94,12 +94,12 @@
         </picture>
       </div>
         <img
-          class="banner__decoration banner__decorationBottomLeft"
+          class="banner__decoration banner__decoration--bottomLeft"
           alt="branche de sapin"
           src="images/mobile/christmas-decorations/sapin-gauche-bot.png"
         />
         <img
-          class="banner__decoration banner__decorationBottomRight"
+          class="banner__decoration banner__decoration--bottomRight"
           alt="branche de sapin"
           src="images/mobile/christmas-decorations/sapin-droite-bottom.png"
         />
@@ -264,7 +264,10 @@
               class="slider__arrow--right"
             ></div>
           </div>
-          <p class="button"><a class="buttonLink" href="">Découvrir la gamme</a></p>
+          <div class="original__button">
+            <a class="buttonLink" href="">Découvrir la gamme</a>
+          </div>
+          
         </section>
 
         <section class="boxProduct original">
@@ -285,9 +288,9 @@
             <div class="addButton"></div>
             <p class="text-cart">ajouter au panier</p>
           </div>
-          <p class="button"><a class="buttonLink" href="">Voir l'assortiment</a></p>
+          <div class="box__button"><a class=" buttonLink" href="">Voir l'assortiment</a></div>
         </section>
-      </div>
+    </div>
 
 
       <div class="vertuorange">
@@ -360,7 +363,7 @@
               class="slider__arrow--right"
             ></div>
           </div>
-          <p class="button"><a class="buttonLink"href="">Découvrir la gamme</a></p>
+          <div class="vertuo__button"><a class="buttonLink"href="">Découvrir la gamme</a></div>
         </section>
 
         <section class="boxProduct vertuo">
@@ -379,10 +382,9 @@
             <div class="addButton"></div>
             <p class="text-cart">ajouter au panier</p>
           </div>
-          <p class="button"><a class="buttonLink" href="">Voir l'assortiment</a></p>
+          <div class="box__button"><a class="buttonLink" href="">Voir l'assortiment</a></div>
         </section>
-      </div>
-      
+<!--       
       <section class="machines">
         <h2 class="title">machines</h2>
         <h3 class="product-category">original</h3>
@@ -418,7 +420,7 @@
         </div>
 
 
-      </section>
+      </section> -->
 
 
 

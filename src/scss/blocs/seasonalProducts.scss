@@ -1,5 +1,3 @@
-@import '../config/colors.scss';
-
 .seasonalProducts {
   height: 100vh;
   background-image: url('../images/mobile/christmas-decorations/stars-background.png');
@@ -8,10 +6,10 @@
   object-fit: cover;
   background-attachment: fixed;
   position: relative;
+  max-height: 800px;
 
   @media (min-width: 700px) {
     background-image: url('../images/desktop/christmas-decorations/stars-background-large.png');
-    max-height: 100vh;
   }
   
 
@@ -191,6 +189,8 @@
       right: 20px;
     }
   }
+
+ 
 
 
 }

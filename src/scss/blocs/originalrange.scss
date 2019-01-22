@@ -4,8 +4,21 @@
     display: flex;
     flex-direction: row-reverse;
 
+
+
     .boxProduct.original {
-      width: 40%;
+      width: 40vw;
+      max-height: 800px;
     }
+
+    .nespressoOriginal {
+      max-height: 800px;
+    }
+  }
+
+  .original__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
   }
 }
