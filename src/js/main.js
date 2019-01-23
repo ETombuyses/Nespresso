@@ -35,7 +35,19 @@ var swapImages = function (coffeeType) {
       slides.prepend(slides.querySelectorAll('li')[slidesLength - 1]);
   });
 
+  slides.querySelector('li').addEventListener('click', function () {
+    var img = slides.querySelectorAll('img');
+    slides.querySelector('li img').remove();
+    slides.querySelector('li').appendChild(img[1]);
 
+    slides.querySelector('li:nth-child(2) img').remove();
+    slides.querySelector('li:nth-child(2)').appendChild(img[2]);
+
+    slides.querySelector('li:nth-child(3) img').remove();
+    slides.querySelector('li:nth-child(3)').appendChild(img[0]);
+    
+
+  });
 };
 
 swapImages(limitedEdition);

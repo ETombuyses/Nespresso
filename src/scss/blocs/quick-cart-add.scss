@@ -19,6 +19,7 @@
     height: 30px;
     background-color: $gold;
     border-radius: 50%;
+    cursor: pointer;
 
     &::before {
       content: '';

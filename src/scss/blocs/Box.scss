@@ -41,6 +41,7 @@
       height: 30px;
       background-color: $gold;
       border-radius: 50%;
+      cursor: pointer;
 
       &::before {
         content: '';
@@ -67,12 +68,13 @@
     .text-cart {
       text-transform: uppercase;
       letter-spacing: 2px;
+      cursor: pointer;
     }
 
   }
 
   .box__button {
-   display: flex;
+   display: inline-block;
    margin-top: 5vh;
   }
 

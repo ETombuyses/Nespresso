@@ -105,8 +105,8 @@
         />
       </section>
 
-      <section id="limited-edition" class="seasonalProducts">
-        <h2 class="seasonalProducts__title title">édition limitée</h2>
+      <section id="limited-edition" class="limitedEdition">
+        <h2 class="limitedEdition__title title">édition limitée</h2>
         <img
           class="decoration--right"
           src="images/mobile/christmas-decorations/spain-editionlimitee-droite.png"
@@ -288,7 +288,7 @@
             <div class="addButton"></div>
             <p class="text-cart">ajouter au panier</p>
           </div>
-          <div class="box__button"><a class=" buttonLink" href="">Voir l'assortiment</a></div>
+          <a class="box__button buttonLink" href="">Voir l'assortiment</a>
         </section>
     </div>
 
@@ -382,8 +382,9 @@
             <div class="addButton"></div>
             <p class="text-cart">ajouter au panier</p>
           </div>
-          <div class="box__button"><a class="buttonLink" href="">Voir l'assortiment</a></div>
+          <a class="box__button buttonLink" href="">Voir l'assortiment</a>
         </section>
+        </div>
 <!--       
       <section class="machines">
         <h2 class="title">machines</h2>
@@ -422,6 +423,50 @@
 
       </section> -->
 
+      <br>
+      <div><address>
+        35 vandenbroek <br> 1234 Paris <br> France 
+        utiliser des balises time.
+        utiliser des strongs ? des em //strong?
+        figure et figcaption ? 
+
+
+        éléments blocks : occupent toute la largeur et provoquent un retour à la ligne pour un bloc suivant
+                          mais un élément inline peut se mettre à côté
+        éléments inline : occupent ce dont ils ont besoin et se suivent cote à cote.
+
+        UTILISER cursor: pointer; pour tous les éléments clicables
+
+        nth-chil et of type revoir. odd even aussi
+
+       noms classes css s'écrivent en général en kebab-case
+
+       variables JS = camelCase
+
+       tailles d'images : préférer max-width: 100% que juste width 100%. elle vont s'agrandir max juqu'à 100% du conteneur, mais pas plus que leur propre largeur d'origine.
+
+       inline-block : permet à des blocs de se mettre en ligne et pas en dessous l'un de l'autre.
+
+       les éléments inline (ex a) ne PEUVENT PAS AVOIR DE MARGIN TOP OU BOTTOM --> les mettre en inline-block
+
+       un bloc prend toute une ligne (visible si background coloré
+
+       savoir refaire des @font-face //woff : compris par quasi tous les navigateurs.
+       //woff2 plus performant mais moins souvent compris --> proposer les deux
+        quand on utilise une font family, écrire une font de secours serif ou sans serif au càs où ça charge pas
+      --> font-family: Helvetica, sans-serif;
+
+      aligner des flex-box en une ligne sans flex bos parent --> parent: display: inline-flex;
+      revoir les propriété flex box des ENFANTS flex box: grow, order...
+
+      refaire des float. CH 3
+      float : dit à un élément de flotter à partir de là où il est et les autres éléméents le contournent. si c'est une image float, du texte va la contourner // google docs imag et texte flottant
+    --> utiliser float avec clearfix pour pas que l'élément float dépasse des divs si'l est trop grand.
+        ne jamais utiliser !important car impose une règle de s'appliquer même s'il existe une autre règle qui la contre
+
+        mieux de mettre nos svg directement dans notre code pour économiser une requête.
+      </address></div>
+      
 
 
 

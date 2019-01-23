@@ -1,4 +1,4 @@
-.seasonalProducts {
+.limitedEdition {
   height: 100vh;
   background-image: url('../images/mobile/christmas-decorations/stars-background.png');
   opacity: 1;
@@ -59,6 +59,7 @@
         opacity: 0.5;
         height: 50%;
         margin-top: 63px;
+        cursor: pointer;
 
         @include small {
           height: 80%;
@@ -73,6 +74,7 @@
       left: 50%;
       transform: translateX(-50%);
       margin-top: 5px;
+      cursor: pointer;
     }
   }
 
@@ -90,6 +92,7 @@
     .slider__arrow--left {
       width: 30px;
       height:30px;
+      cursor: pointer;
 
       &::before {
         content: '';
@@ -115,6 +118,7 @@
       
       width: 30px;
       height:30px;
+      cursor: pointer;
 
 
       &::before {
@@ -162,6 +166,7 @@
         text-transform: uppercase;
         text-align: center;
         margin-top: 8px;
+        cursor: pointer;
       }
 
       li .description {
