@@ -28,7 +28,11 @@ var swapImages = function (coffeeType) {
   var rightArrow = coffeeType.querySelector('#right-arrow');
 
   rightArrow.addEventListener('click', function () {
-    slides.appendChild(slides.querySelector('li'));
+    
+    setTimeout(function () {
+      slides.appendChild(slides.querySelector('li'));
+    }, 1000)
+    
   });
 
   leftArrow.addEventListener('click', function (){
@@ -39,6 +43,7 @@ var swapImages = function (coffeeType) {
     var img = slides.querySelectorAll('img');
     slides.querySelector('li img').remove();
     slides.querySelector('li').appendChild(img[1]);
+    console.log(slides.querySelector('li:nth-child(2) img')); // doesn't work
 
     slides.querySelector('li:nth-child(2) img').remove();
     slides.querySelector('li:nth-child(2)').appendChild(img[2]);

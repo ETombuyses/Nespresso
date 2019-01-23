@@ -1,6 +1,6 @@
 html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
+  // overflow-x: hidden;
+  // max-width: 100vw;
 }
 
 .banner {
@@ -10,6 +10,7 @@ html, body {
   overflow: hidden;
   width: 100vw;
   max-height: 800px;
+  position: relative;
 
   .banner__title {
     text-align: center;
@@ -44,23 +45,29 @@ html, body {
   .banner__decoration--TopLeft {
     left: -120px;
     top: -100px;
-    // transform: translateX(-60%) translateY(-30%);
     animation: christmastreeLeftTop 8s infinite;
     animation-delay: 2s;
+
+    @include small {
+      left: -90px;
+      top: -10px;
+    }
   }
 
   .banner__decoration--TopRight {
     right: -70px;
     top: -50px;
-    // transform: translateX(30%) translateY(-45%);
     animation: christmastreeRightTop 8s infinite;
     animation-delay: 2.5s;
+
+    @include small {
+      top: 50px;
+    }
   }
 
   .banner__decoration--bottomRight {
     right: -80px;
     bottom: 50px;
-    // transform: translateX(50%);
     animation: christmastreeRightBottom 8s infinite;
     animation-delay: 2.5s;
   
@@ -73,7 +80,6 @@ html, body {
   .banner__decoration--bottomLeft {
     left: -120px;
     bottom: 50px;
-    // transform: translateX(-55%);
     animation: christmastreeLeftBottom 7.9s infinite;
     animation-delay: 2s;
 
