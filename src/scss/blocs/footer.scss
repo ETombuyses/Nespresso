@@ -1,0 +1,22 @@
+.siteFooter {
+  height: 200px;
+  background-color: $black;
+  border-top: 1px solid white;
+  color: white;
+  padding: 50px;
+  text-align: center;
+
+  .link {
+    font-family: Helvetica;
+    color: $gold;
+    text-decoration: double underline;
+  }
+
+  @include small {
+    height: 100px;
+    padding: 30px;
+  }
+
+
+
+}

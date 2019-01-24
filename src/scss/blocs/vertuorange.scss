@@ -5,18 +5,16 @@
 
     .boxProduct.vertuo {
       width: 30vw;
-      max-height: 800px;
     }
 
     .nespressoVertuo {
       flex-grow: 2;
-      max-height: 800px;
     }
   }
 
   .vertuo__button {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 2vh;
   }
 }

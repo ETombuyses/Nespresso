@@ -9,12 +9,12 @@ burgerButton.addEventListener('click', function(){
   burgerButton.classList.toggle('is-open');
 });
 
-// banner parrallax
-var rellax = new Rellax('.banner__decoration--blackIntensoOriginal');
+// // banner parrallax
+// var rellax = new Rellax('.banner__decoration--blackIntensoOriginal');
 
-var rellax = new Rellax('.banner__decoration--blackIntensoVertuo', {
-  center: true
-});
+// var rellax = new Rellax('.banner__decoration--blackIntensoVertuo', {
+//   center: true
+// });
 
 
 
@@ -28,17 +28,27 @@ var swapImages = function (coffeeType) {
   var rightArrow = coffeeType.querySelector('#right-arrow');
 
   rightArrow.addEventListener('click', function () {
-    
+    slides.style.opacity="0";
+    slides.style.transition="opacity 0.5s";
     setTimeout(function () {
       slides.appendChild(slides.querySelector('li'));
-    }, 1000)
+      slides.style.opacity="1";
+      slides.style.transition="opacity 0.8s";
+    }, 500)
     
   });
 
   leftArrow.addEventListener('click', function (){
+    slides.style.opacity="0";
+    slides.style.transition="opacity 0.5s";
+    setTimeout(function () {
       slides.prepend(slides.querySelectorAll('li')[slidesLength - 1]);
+      slides.style.opacity="1";
+      slides.style.transition="opacity 0.8s";
+    }, 500)
   });
 
+  // images on click : doesn't work yet
   slides.querySelector('li').addEventListener('click', function () {
     var img = slides.querySelectorAll('img');
     slides.querySelector('li img').remove();
@@ -50,8 +60,6 @@ var swapImages = function (coffeeType) {
 
     slides.querySelector('li:nth-child(3) img').remove();
     slides.querySelector('li:nth-child(3)').appendChild(img[0]);
-    
-
   });
 };
 
@@ -80,36 +88,64 @@ var moveImages = function (coffeeType) {
   var slidesLength = slides.querySelectorAll('li').length;
 
   rightArrow.addEventListener('click', function() {
-    if (index < slidesLength - 1) {
-      index++;
-      slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
-    }
+    setTimeout(function () {
+      if (index < slidesLength - 1) {
+        index++;
+        slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+      }
 
-    if (index === slidesLength - 1) {
-      index = 0;
-      slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
-    }
+      if (index === slidesLength - 1) {
+        index = 0;
+        slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+      }
+    }, 500);
+   
   });
 
   leftArrow.addEventListener('click', function() {
-
-    if (index > 0) {
-      index--;
-      slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
-    }
-
-    else {
-      if (index === 0) {
-        index = slidesLength - 2;
+    setTimeout(function () {
+      if (index > 0) {
+        index--;
         slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
       }
-    }
+
+      else {
+        if (index === 0) {
+          index = slidesLength - 2;
+          slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+        }
+      }
+    }, 500);
   });
 } ;
 
 moveImages(original);
 moveImages(vertuo);
 moveImages(limitedEdition);
+
+
+
+/* Increment cart number items */
+
+var cartItems = function() {
+  var addCartButtons = document.querySelectorAll('.cartAdd__addButton');
+
+  for (i = 0 ; i < addCartButtons.length; i++) {
+    let button = addCartButtons[i];
+    button.addEventListener('click', function() {
+      let numberItems = Number(document.querySelector('.cart-item-number').dataset.items);
+      numberItems += 1;
+      document.querySelector('.cart-item-number').dataset.items = numberItems;
+      document.querySelector('.cart-item-number').innerHTML = numberItems;
+    });
+  }  
+}
+
+cartItems();
+
+
+
+
 
 
 

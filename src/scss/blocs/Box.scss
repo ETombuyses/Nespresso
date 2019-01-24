@@ -1,10 +1,15 @@
 .boxProduct {
   height: 100vh;
+  max-height: 750px;
   background-color: black;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
   color: white;
+
+  @include small {
+    height: calc(100vh - 80px);
+  }
 
   .box-image {
     margin-bottom: 40px;

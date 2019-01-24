@@ -2,7 +2,12 @@
 
 .nespressoOriginal {
   height: 100vh;
+  max-height: 750px;
   position: relative;
+
+  @include small {
+    height: calc(100vh - 80px);
+  }
 
   .product-category {
     color: $gold;
