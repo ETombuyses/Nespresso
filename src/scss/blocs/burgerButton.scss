@@ -1,4 +1,4 @@
-.burgerButton__bars {
+.burgerMenu__bars {
   width: 30px;
   height: 3px;
   background-color: $gold;
@@ -8,7 +8,7 @@
 
 
   &::before {
-    content: ''; /* comment : marche pas sans le content ! */
+    content: '';
     display: block;
     width: 30px;
     height: 3px;
@@ -18,7 +18,7 @@
   }
 
   &::after {
-    content: ''; /* comment : marche pas sans le content ! */
+    content: '';
     display: block;
     width: 30px;
     height: 3px;

@@ -1,4 +1,4 @@
-.header { // si bug, à cause des images sapin qui dépassent
+.header {
   background-color: $black;
   width: 100vw;
   height: 50px;
@@ -6,21 +6,22 @@
   z-index: 10;
   bottom: 0;
   transition: height 0.3s ease-in;
-
-  .header__burgerButton {
-    height: 50px;
-    width: 100vw;
-    position: fixed;
-    bottom: 0px;
-
-    @include small {
-      display: none;
-    }
+  
+  @include small {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    position: fixed relative;
+    top: 0px;
+    border-bottom: white 1px solid;
+    justify-content: center;
+    padding: 20px;
   }
-
   
   &.is-open {
-      .burgerButton__bars {
+    height: 100vh;
+
+      .burgerMenu__bars {
         background-color: transparent;
   
         &::before {
@@ -31,93 +32,136 @@
           transform: translateX(12px) translateY(-5px) rotate(-45deg);
         }
       }
+
+      .mainNav__homeLink { 
+        display: block;
+        width: 157px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .mainNav__navigationLinks {
+        display: flex;
+      }
+  
+      .sideNav__links {
+        display: flex;
+      }
+  
+      @include small {
+        height: 100px;
+      }
     }
+}
 
-  .header__logo {
-    height: 15vh;
-    padding-top: 50px;
-    display: none;
 
-    @include small {
-      display: block;
-      margin: auto;
-      position: absolute;
-      // left: 50%; // image starts in the middle of the page
-      // transform: translateX(-50%); // half the image go left --> centered
-      padding-top: 0;
-      height: auto;
-    }
-  }
-
-  .header__navigation {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-
-    @include small{
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      width: 600px;
-      justify-content: space-between;
-      margin-top: 42px;
-      height: 30px;
-    }
-  }
-
-  .header__navigationOthers {
-    display: none;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 15vh;
-    padding-bottom: 10vh;
-    width: 100vw;
-
-    @include small {
-      display: flex;
-      position: absolute;
-      right: 15px;
-      top: 10px;
-      width: 250px;
-      padding: 0px;
-      height: 30px;
-    }
-  }
-
-  &.is-open {
-    height: 100vh;
-
-    .header__logo { 
-      display: block;
-      width: 157px;
-      margin-left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .header__navigation {
-      display: flex;
-    }
-
-    .header__navigationOthers {
-      display: flex;
-    }
-
-    @include small {
-      height: 100px;
-    }
-  }
+.header__burgerMenu {
+  height: 50px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
 
   @include small {
-  display: flex;
-  flex-direction: row;
-  height: 100px;
-  position: fixed;
-  top: 0px;
-  border-bottom: white 1px solid;
-  justify-content: center;
-  padding: 20px;
+    display: none;
   }
+}
+
+
+.mainNav__homeLink {
+  height: 15vh;
+  padding-top: 50px;
+  display: none;
+
+  @include small {
+    display: block;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    padding-top: 0;
+  } 
+}
+
+.mainNav__logo {
+
+  @include small {
+    display: block;
+    margin: auto; 
+  }
+  
+}
+
+.mainNav__navigationLinks {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+  @include small{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 600px;
+    justify-content: space-between;
+    margin-top: 42px;
+    height: 30px;
+  }
+}
+
+.sideNav__links {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15vh;
+  padding-bottom: 10vh;
+  width: 100vw;
+
+  @include small {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 250px;
+    padding: 0px;
+    height: 30px;
+  }
+}
+
+.navigationLinks__link {
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+    letter-spacing: 10%;
+    font-family: 'Trebuchet MS';
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10vh;
+
+    @include small {
+     margin: 0; 
+    }
+  }
+}
+
+.sideNav__link {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+  .sideNav__cartItems {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    @include small {
+    
+    top: 4px;
+    right: 82px;
+    font-size: 14px;
+    }
+  }
+
+
 }
 

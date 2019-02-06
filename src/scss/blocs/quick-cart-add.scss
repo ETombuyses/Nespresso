@@ -1,5 +1,4 @@
 .cartAdd {
-
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -20,6 +19,7 @@
     background-color: $gold;
     border-radius: 50%;
     cursor: pointer;
+
 
     &::before {
       content: '';

@@ -6,50 +6,49 @@
     <link rel="stylesheet" href="scss/styles.scss" />
     <link rel="icon" href="images/flavicon/nespresso.ico">
     <script defer src="js/main.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js"
-    ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js">
+    </script>
     <title>Nespresso</title>
   </head>
 
   <body>
-    <header>
-      <nav class="header">
-        <div class="header__burgerButton burgerButton">
-          <div class="burgerButton__bars"></div>
-        </div>
-        <a class="header__logo">
-          <img
-            alt="logo Nespresso"
-            src="images/mobile/logos/nespresso-logo.png"
-          />
+    <header class="header">
+      <div class="header__burgerMenu burgerMenu">
+        <div class="burgerMenu__bars"></div>
+      </div>
+    
+      <nav class="header__mainNav mainNav">
+        <a class="mainNav__homeLink">
+          <img class="mainNav__logo" alt="logo Nespresso" src="images/mobile/logos/nespresso-logo.png"/>
         </a>
-        <ul class="header__navigation navigation">
-          <li class="navigation__link"><a href="#">Cafés</a></li>
-          <li class="navigation__link"><a href="#">Machines</a></li>
-          <li class="navigation__link"><a href="#">Accessoires</a></li>
-          <li class="navigation__link"><a href="#">Services</a></li>
-          <li class="navigation__link"><a href="#">Nous trouver</a></li>
+        <ul class="mainNav__navigationLinks navigationLinks">
+          <li class="navigationLinks__link"><a href="#">Cafés</a></li>
+          <li class="navigationLinks__link"><a href="#">Machines</a></li>
+          <li class="navigationLinks__link"><a href="#">Accessoires</a></li>
+          <li class="navigationLinks__link"><a href="#">Services</a></li>
+          <li class="navigationLinks__link"><a href="#">Nous trouver</a></li>
         </ul>
-        <ul class="header__navigationOthers navigationOthers">
-          <li class="navigationOthers__link">
+      </nav>
+      <nav class="header__sideNav sideNav">
+        <ul class="sideNav__links">
+          <li class="sideNav__link">
             <img alt="icône question" src="images/mobile/icons/help-icon.svg" />
           </li>
-          <li class="navigationOthers__link">
-            <img
-              alt="icône profil"
-              src="images/mobile/icons/profile-icon.svg"
-            />
+          <li class="sideNav__link">
+            <img alt="icône profil" src="images/mobile/icons/profile-icon.svg" />
           </li>
-          <li class="navigationOthers__link">
+          <li class="sideNav__link">
             <img alt="icône pannier" src="images/mobile/icons/cart-icon.svg" />
-            <div class="cart-item-number" data-items="0">0</div>
+            <div class="sideNav__cartItems" data-items="0">0</div>
           </li>
-          <li class="navigationOthers__link">FR</li>
+          <li class="sideNav__link">FR</li>
         </ul>
       </nav>
     </header>
+
+
+
+    
     <main>
       <section class="banner">
         <img
@@ -154,7 +153,8 @@
               </p>
               <p class="price">0,45€</p>
               <div class="cartAdd">
-                <p class="cartAdd__quantity">1</p>
+                <input class="cartAdd__quantity" type="text" placeholder="1">
+                <!-- <p class="cartAdd__quantity">1</p> -->
                 <div class="cartAdd__addButton"></div>
               </div>
             </li>
@@ -165,7 +165,8 @@
               </p>
               <p class="price">0,45€</p>
               <div class="cartAdd">
-                <p class="cartAdd__quantity">1</p>
+                <input class="cartAdd__quantity" type="text" placeholder="1">
+                <!-- <p class="cartAdd__quantity">1</p> -->
                 <div class="cartAdd__addButton"></div>
               </div>
             </li>
@@ -176,7 +177,8 @@
               </p>
               <p class="price">0,45€</p>
               <div class="cartAdd">
-                <p class="cartAdd__quantity">1</p>
+                <input class="cartAdd__quantity" type="text" placeholder="1">
+                <!-- <p class="cartAdd__quantity">1</p> -->
                 <div class="cartAdd__addButton"></div>
               </div>
             </li>
@@ -213,7 +215,8 @@
                 <p class="productName">cappriccio</p>
                 <p class="price">0,35€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <!-- <p class="cartAdd__quantity">1</p> -->
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -225,7 +228,8 @@
                 <p class="productName">cosi</p>
                 <p class="price">0,35€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <!-- <p class="cartAdd__quantity">1</p> -->
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -237,7 +241,8 @@
                 <p class="productName">livanto</p>
                 <p class="price">0,35€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
+                  <!-- <p class="cartAdd__quantity">1</p> -->
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -249,7 +254,8 @@
                 <p class="productName">volluto</p>
                 <p class="price">0,35€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
+                  <!-- <p class="cartAdd__quantity">1</p> -->
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -312,7 +318,8 @@
                 <p class="productName">altissio</p>
                 <p class="price">0,40€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <!-- <p class="cartAdd__quantity">1</p> -->
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -324,7 +331,8 @@
                 <p class="productName">decaffeinato</p>
                 <p class="price">0,40€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <!-- <p class="cartAdd__quantity">1</p> -->
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -336,7 +344,8 @@
                 <p class="productName">diavolitto</p>
                 <p class="price">0,40€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <!-- <p class="cartAdd__quantity">1</p> -->
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>
@@ -348,7 +357,8 @@
                 <p class="productName">voltesso</p>
                 <p class="price">0,40€</p>
                 <div class="cartAdd">
-                  <p class="cartAdd__quantity">1</p>
+                  <!-- <p class="cartAdd__quantity">1</p> -->
+                  <input class="cartAdd__quantity" type="text" placeholder="1">
                   <div class="cartAdd__addButton"></div>
                 </div>
               </li>

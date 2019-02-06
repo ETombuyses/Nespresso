@@ -1,21 +1,18 @@
-var navigationBar = document.querySelector('.header');
-var burgerButton = document.querySelector('.burgerButton');
-var burgerButton
-var navigationTabs = document.querySelector('.navigation');
-var navigationOthers = document.querySelector('.navigationOthers');
 
-burgerButton.addEventListener('click', function(){
+/* OPEN BURGER MENU */
+var navigationBar = document.querySelector('.header');
+var burgerMenu = document.querySelector('.burgerMenu');
+
+burgerMenu.addEventListener('click', function(){
   navigationBar.classList.toggle('is-open');
-  burgerButton.classList.toggle('is-open');
+  burgerMenu.classList.toggle('is-open');
 });
 
-// // banner parrallax
+// /* PARALLAX EFFECT */
 // var rellax = new Rellax('.banner__decoration--blackIntensoOriginal');
-
 // var rellax = new Rellax('.banner__decoration--blackIntensoVertuo', {
 //   center: true
 // });
-
 
 
 /* SLIDER LIMITED EDITION */
@@ -48,19 +45,23 @@ var swapImages = function (coffeeType) {
     }, 500)
   });
 
-  // images on click : doesn't work yet
-  slides.querySelector('li').addEventListener('click', function () {
+  /* MOVE SLIDER IMAGES ON CLICK */
+  slides.querySelector('li:nth-child(3)').addEventListener('click', function () {
     var img = slides.querySelectorAll('img');
     slides.querySelector('li img').remove();
     slides.querySelector('li').appendChild(img[1]);
-    console.log(slides.querySelector('li:nth-child(2) img')); // doesn't work
-
-    slides.querySelector('li:nth-child(2) img').remove();
     slides.querySelector('li:nth-child(2)').appendChild(img[2]);
-
-    slides.querySelector('li:nth-child(3) img').remove();
     slides.querySelector('li:nth-child(3)').appendChild(img[0]);
   });
+
+  slides.querySelector('li').addEventListener('click', function () {
+    var img = slides.querySelectorAll('img');
+    slides.querySelector('li img').remove();
+    slides.querySelector('li').appendChild(img[2]);
+    slides.querySelector('li:nth-child(2)').appendChild(img[0]);
+    slides.querySelector('li:nth-child(3)').appendChild(img[1]);
+  });
+
 };
 
 swapImages(limitedEdition);
@@ -72,12 +73,6 @@ var original = document.getElementById('original');
 var vertuo = document.getElementById('vertuo');
 var limitedEdition = document.getElementById('limited-edition');
 
-// les paramètres d'une fonction n'existent que dans la fonction. --> utiliser return pour sauvegarder les valeurs de la fonction si on doit les utiliser en dehors.
-// ATTENTION: on a droit qu'à une seule valeur dans return --> si on a besoin de plusieurs valeurs, faire un tableau dans return
-// ex: return = {index: index, slider: slider}
-
-// écrire var ou juste function directement c'est pareil
-
 var moveImages = function (coffeeType) {
   var slides = coffeeType.querySelector('#slides');
   var leftArrow = coffeeType.querySelector('#left-arrow');
@@ -88,15 +83,23 @@ var moveImages = function (coffeeType) {
   var slidesLength = slides.querySelectorAll('li').length;
 
   rightArrow.addEventListener('click', function() {
+    slides.style.opacity="0";
+    slides.style.transition="opacity 0.5s";
     setTimeout(function () {
+      
+
       if (index < slidesLength - 1) {
         index++;
         slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+        slides.style.opacity="1";
+        slides.style.transition="opacity 0.8s";
       }
 
       if (index === slidesLength - 1) {
         index = 0;
         slides.style.transform = "translateX(" + index * sliderWidth * -1 + "px)";
+        slides.style.opacity="1";
+        slides.style.transition="opacity 0.8s";
       }
     }, 500);
    
@@ -125,7 +128,7 @@ moveImages(limitedEdition);
 
 
 
-/* Increment cart number items */
+/* INCREMENT CART ITEMS NUMBER*/
 
 var cartItems = function() {
   var addCartButtons = document.querySelectorAll('.cartAdd__addButton');
@@ -133,17 +136,15 @@ var cartItems = function() {
   for (i = 0 ; i < addCartButtons.length; i++) {
     let button = addCartButtons[i];
     button.addEventListener('click', function() {
-      let numberItems = Number(document.querySelector('.cart-item-number').dataset.items);
+      let numberItems = Number(document.querySelector('.sideNav__cartItems').dataset.items);
       numberItems += 1;
-      document.querySelector('.cart-item-number').dataset.items = numberItems;
-      document.querySelector('.cart-item-number').innerHTML = numberItems;
+      document.querySelector('.sideNav__cartItems').dataset.items = numberItems;
+      document.querySelector('.sideNav__cartItems').innerHTML = numberItems;
     });
   }  
 }
 
 cartItems();
-
-
 
 
 
